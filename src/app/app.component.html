@@ -1,8 +1,17 @@
-<!-- <img width="100%" src= "assets/webgenerali.PNG"> -->
 
-<style>
-  body {
-    background-image: url('../assets/webgenerali.PNG');
-  }
-  </style>
-<body></body>
+  <div class ="top"  fxLayout="row" fxLayoutAlign="start center">
+    <img routerLink="home" height = "30px" src = "../assets/Generali_logo_Horizontal_white.svg">
+    <img class = "top-right-img" class = "right" height = "30px" src="../assets/top banner generali.PNG">
+    
+      <a routerLink="incidencias">Reclamaciones</a>
+ 
+  </div>
+  <div class = "center-position">
+    <router-outlet width = "100%"></router-outlet>
+  </div>
+  <div class = "footer" fxLayout="row" fxLayoutAlign="start center">
+    <img class = "bottom-right-img" class = "right" src = "../assets/bottom banner generalli.PNG">
+    <p class = "bottom-right"></p>
+  </div>
+
+
