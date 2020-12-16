@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {FormsModule} from '@angular/forms'
+import {MatButtonModule} from '@angular/material/button';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import {FormsModule} from '@angular/forms'
     MatInputModule,
     MatFormFieldModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -54,4 +54,8 @@
   transform: translate(-50%, -50%);
 }
 
+button{
+  width: 408px; height: 60px; line-height: 48px; 
+  color: rgb(133, 131, 131);
+}
   
