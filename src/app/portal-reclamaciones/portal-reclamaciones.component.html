@@ -1,6 +1,7 @@
 <div class = "content" div fxLayout = "column" fxLayoutAlign="start start" >
-    <div class = "top-banner">
-        <h1 ><h3 class = "banner-text">Portal de reclamaciones</h3></h1>
+    <div fxLayout="row" fxLayoutAlign="space-between center" class = "top-banner">
+        <h1 class = "banner-text">Portal de seguros   </h1> <h4 style="margin-right: 25px;"><a style="color:'white'" href="https://www.generali.es/contacto-generali/siniestros" target="_blank" rel="noopener noreferrer"  >Notificar una incidencia</a> </h4>
+      
     </div>
     <div fxLayout = "row" fxLayoutAlign="start center" > 
         <h2>Codigo del contrato: </h2> 
@@ -8,20 +9,21 @@
     </div>
 
     <div *ngIf = "contrato">
-        <h2><h2>Contrato :</h2> 
-            <br>
-            Tipo de contrato: {{contrato.seguroContratado}} <br>
-            Producto sobre el que se ha contratado el seguro: <br>
-            Nombre :{{contrato.producto.nombre}} <br>
-            Categoria : {{contrato.producto.categoria.tipo}} / {{contrato.producto.categoria.subtipo}}
-            Precio: {{contrato.producto.precio}} <br>
-            EAN: {{contrato.producto.id}} <br>
-           <a href="https://www.generali.es/content/dam/generali-seguros/web/footer/documents/informacion-de-productos/otros/IPID_G_ARTE_00072.pdf" target="_blank" rel="noopener noreferrer" >Consultar las condiciones del seguro </a>
-        </h2>  
+        
+        <h3>Tipo de contrato:</h3> <div class="content-text">{{contrato.tipo}}</div> 
+        <h3>Nombre del producto asegurado:</h3> <div class="content-text">{{contrato.nombre}} </div>
+        <h3>Precio del seguro:</h3> <div class="content-text">{{contrato.precio | currency: '' | euro}} </div>
+        <h3>Fecha de contratación del seguro:</h3> <div class="content-text"> {{contrato.fechaInicio | date: "dd/MM/YYYY"}}</div>
+        <h3>EAN:</h3> <div class="content-text">{{contrato.ean}} </div>
+        <h3>Terminos i Condiciones:</h3>
+        <div>   
+            <a href="https://www.generali.es/content/dam/generali-seguros/web/footer/documents/informacion-de-productos/otros/IPID_G_ARTE_00072.pdf" target="_blank" rel="noopener noreferrer" >Consultar las condiciones del seguro </a>
+        </div> 
+        <br>
     </div>
     <div *ngIf="error">
-        <img *ngIf="error.status == 404" height ="200px" src="https://bit.ly/3mrhi7s">
-        <h2 class = "error">It Looks like something went wrong, for more help try reaching one of our agents in the <a href="https://www.generali.es/contacto-generali/atencion-al-cliente" target="_blank" rel="noopener noreferrer">help center</a></h2>
+        <img *ngIf="error.status == 404" height ="150px" src="https://www.integration.works/img/404.png">
+        <h2 *ngIf="error.status == 404" class = "error">It Looks like something went wrong, for more help try reaching one of our agents in the <a href="https://www.generali.es/contacto-generali/atencion-al-cliente" target="_blank" rel="noopener noreferrer">help center</a></h2>
         <br>
     </div>
 

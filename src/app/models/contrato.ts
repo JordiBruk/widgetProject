@@ -2,7 +2,11 @@ import { Producto } from "./Producto";
 
 export class Contrato {
 
-    producto: Producto;
-    seguroContratado:string;
+    id:string;
+    codigoTienda:string;
+    nombre:string;
+    tipo:string;
+    precioSeguro:number;
+    ean:string;
     fechaInicio:Date;
 }
