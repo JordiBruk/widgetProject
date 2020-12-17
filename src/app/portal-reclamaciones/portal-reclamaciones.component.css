@@ -1,0 +1,29 @@
+.content{
+    background-color: white;
+    width:auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 50px;
+}
+
+div{
+    margin-left: 2%;
+}
+.error{
+    color: tomato;
+}
+.top-banner{
+    margin-left: 0;
+    
+    border-top-left-radius: 50px; 
+    border-top-right-radius: 50px; 
+    width: 100%;
+    
+    background-origin: border-box;
+    background-color: #c5281c;
+    color: white;
+    
+}
+.banner-text{
+    margin-left: 2%;
+}

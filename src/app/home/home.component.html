@@ -1,0 +1,22 @@
+<div  fxLayout="row" fxLayoutAlign="space-around start">
+    <div >
+        <a href="https://www.generali.es/dig_customerPortalWeb/www/index.html#/DigitalIdLoginPage"><img src= "../assets/acceder.PNG"></a>
+    </div>
+
+    <div  class= "container">
+        <img src= "..\assets\accederAreaReclamaciones.png">
+        <form >
+           
+            <mat-form-field class="centered">
+              <mat-label>Codigo contrato</mat-label>
+              <input matInput [(ngModel)]="codigo" name="input" placeholder="" (keydown.enter) = "cargaContrato()">
+            </mat-form-field>
+            <button  mat-stroked-button class="centered2" (click) = "cargaContrato() ">Entrar</button>
+          
+        </form>
+        
+    </div>
+
+    
+    
+</div>
